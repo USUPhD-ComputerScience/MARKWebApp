@@ -1,0 +1,491 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 24, 2015, 7:14:58 PM
+    Author     : Phong
+*/
+
+/********************* Colour reference chart****************
+*************************** comment ********* colour ******** 
+
+Big Shiny Text                                #3399FF
+PlusOnly                                      #0025ff
+Title                                         #000000
+link                                          #0645AD
+Rating                                        #FF6600
+Small Text                                    #666633
+Buttons and borders and detail                #0099CC
+Button Hover                                  #66CCFF
+detail                                        #2C6700
+
+*/
+
+.jspTrack
+{
+  position: relative;
+}
+
+.jspDrag
+{
+  background: rgba(0,0,0,0.2); /* changed from #bbd */
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: smaller;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  overflow:auto;
+
+}
+
+h1 {
+  letter-spacing: 6px;
+  font-size: 1.6em;
+  color: #fff;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: left;
+  letter-spacing: 6px;
+  font-size: 1.4em;
+  color: #be7429;
+  font-weight: normal;
+  width: 450px;
+}
+
+td.left {
+  text-align: left;
+}
+
+text.appName {
+  text-align: left;
+  //letter-spacing: 6px;
+  font-size: 1.2em;
+  color: #3399FF;
+  font-weight: bold;
+}
+
+text.link{
+  text-align: center;
+  //letter-spacing: 6px;
+  font-size: 1.5em;
+  color: #0645AD;
+}
+text.link:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+text.appName:hover{
+  cursor: pointer;
+}
+
+text.appSelection{
+  text-align: left;
+  padding-left:20px;
+  padding-right:30px;
+  padding-bottom: 40px;
+  padding-top: 30px;
+  //letter-spacing: 6px;
+  font-size: 2em;
+  color: #000000;
+}
+
+text.generalAnalyses{
+  text-align: left;
+  padding-left:30px;
+  padding-right:30px;
+  //padding-bottom: 20px;
+  //letter-spacing: 6px;
+  font-size: 2em;
+  color: #000000;
+  font-weight: bold;
+}
+
+text.generalTitle{
+  text-align: left;
+  padding-left:20px;
+  padding-right:20px;
+  //padding-bottom: 20px;
+  //letter-spacing: 6px;
+  font-size: 1.8em;
+  color: #000000;
+  font-weight: bold;
+}
+
+text.footerNote{
+  //letter-spacing: 6px;
+  font-size: 1.5em;
+  color: #000000;
+}
+text.appNames{
+  text-align: left;
+  padding-left:30px;
+  //padding-right:30px;
+  //padding-bottom: 20px;
+  //letter-spacing: 6px;
+  font-size: 1.2em;
+  color: #3399FF;
+  font-weight: bold;
+}
+
+text.revTitle{
+  text-align: left;
+  //padding-right:30px;
+  //padding-bottom: 20px;
+  //letter-spacing: 6px;
+  font-size: 1.4em;
+  color: #3399FF;
+  font-weight: bold;
+}
+
+text.X{
+  text-align: left;
+  padding-left:20px;  
+  padding-right:10px;
+  font-size: 1.5em;
+  color: #e9082f;
+  font-weight: bold;
+}
+
+text.X:hover{
+  cursor: pointer;
+}
+
+text.selected {
+  text-align: left;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  //letter-spacing: 6px;
+  font-size: 1.2em;
+  color: #2C6700;
+}
+
+text.keyword{
+  text-align: left;
+  //letter-spacing: 6px;
+  font-size: 1.2em;
+
+  color: #2C6700;
+  font-weight: normal;
+  min-width: 90px;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: -4px;
+}
+
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+.wrapper {
+  margin-top: 70px;
+  
+}
+.footer, .push {
+  height: 4em;
+}
+
+text.keywordButton{
+  text-align: left;
+  //letter-spacing: 6px;
+  font-size: 1.2em;
+
+  color: #2C6700;
+  font-weight: normal;
+  min-width: 90px;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  margin-bottom: -4px;
+}
+text.keywordButton:hover{
+  cursor: pointer;
+}
+
+text.plus{
+  text-align: left;
+
+  //padding-left:10px;  
+  //padding-right:10px;
+
+  font-size: 1.5em;
+  color: #0025ff;
+  font-weight: bold;
+}
+
+text.plus:hover{
+  cursor: pointer;
+}
+
+text.appRate {
+  text-align: left;
+  //letter-spacing: 6px;
+  font-size: 1.2em;
+  color: #FF6600;
+}
+text.grayText {
+  text-align: left;
+  //letter-spacing: 6px;
+  //font-size: 1em;
+  color: #666633;
+}
+
+text.greenText {
+  text-align: left;
+  //letter-spacing: 6px;
+  //font-size: 1em;
+  color: #3399FF;
+}
+
+img.dropdownbutt:hover{
+
+  cursor: pointer;
+}
+
+a {
+  color: #0645AD;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+text.quickopt{
+  font-size: 1em;
+  color: #0645AD;
+  //color: #23701b;
+  padding-left:30px;  
+  //padding-right:10px;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+text.detailQues{
+  font-size: 1em;
+  color: #0645AD;
+  //color: #23701b;  
+  //padding-right:10px;
+  text-decoration: none;
+}
+
+text.detailQues:hover{
+  cursor: pointer;
+}
+
+text.quickopt:hover {
+  cursor: pointer;
+}
+
+div.suggestion{
+  display: block;
+  width: 300px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow:auto;
+}
+
+
+div.listEnhance{
+  display: block;
+  width: 300px;
+  min-height: 300px;
+  max-height: 300px;
+  overflow:auto;
+}
+
+div.tsSmall{
+  background-color: #fafffa;
+  display: block;
+  width: 750px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow:auto;
+}
+
+div.tsBig{
+  background-color: #f7f8fc;
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  //overflow:auto;
+}
+
+div.selectedapp{
+  display: block;
+  width: 300px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow:auto;
+}
+
+
+.titleCell {
+  background-color: #f1e6fc;
+  font-family: 'PT Sans', sans-serif;
+  font-size:150%;
+  min-width: 120px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.selectedCell {
+  background-color: #fffafa;
+  font-family: 'PT Sans', sans-serif;
+  font-size:150%;
+  min-width: 270px;
+  max-width: 270px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.infoCell {
+  background-color: #ffffcc;
+  font-family: 'PT Sans', sans-serif;
+  font-size:150%;
+  min-width: 270px;
+  max-width: 270px;
+}
+.reviewCell {
+  background-color: #fafffa;
+  font-family: 'PT Sans', sans-serif;
+  font-size:150%;
+}
+
+.listEnhance{
+  //background-color: #fffafa;
+  font-family: 'PT Sans', sans-serif;
+  font-size:100%;
+  min-width: 270px;
+  max-width: 270px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.infoCell:hover {
+  background-color: #f1e6fc;
+}
+.popupCell:hover {
+  background-color: #f5ebe9;
+  cursor: pointer;
+}
+
+.unselectCell {
+  font-size:150%;
+}
+
+.unselectCell:hover {
+  background-color: #92f7e9;
+  cursor: pointer;
+}
+
+
+input.search {
+  min-width: 400px;
+  height: 30px;
+  font-family: 'PT Sans', sans-serif;
+  font-size:150%;
+  color: #000000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #003399;
+  //border-color: #003399;
+  border-color: #003399 !important;
+}
+div.topDiv{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #0099CC; 
+  background-color: #fff;
+  //background-color: #0099CC;
+}
+
+div.main{
+  max-height: 100%;
+  min-height: 100%;
+  //max-width: 100%;
+  //min-width: 100%;
+  overflow:auto;
+  background-color: #0099CC;
+}
+
+table.first{
+  //  color: green;
+  //position: fixed;
+  top: 80px;
+  left: 0;
+  max-width:100%;
+  //height: 600px;
+  margin-left: auto;
+  margin-right:auto;
+  //text-align: left;
+  vertical-align: top;
+  ///border: 2px solid gray;
+  //padding: 10px;
+}
+
+table.general{
+  //border: 2px solid #0099CC;
+}
+
+input.button {
+  width: 120px;
+  height: 30px;
+  font-family: 'PT Sans', sans-serif;
+  font-size:150%;
+  color: #fff;
+
+  background-color: #0099CC;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius:6px;
+  text-decoration: none;
+  cursor: pointer;
+  border:1px #999999;
+  outline:none;
+}
+
+input.button:hover {
+  border: none;
+  background: #66CCFF;
+  box-shadow: 0px 0px 1px #777;
+  color: #000000;
+}
+
+span.stars, span.stars span {
+  display: inline-block;
+  background: url(images/stars.png) 0 -16px repeat-x;
+  width: 80px;
+  height: 16px;
+}
+
+span.stars span {
+  background-position: 0 0;
+}
