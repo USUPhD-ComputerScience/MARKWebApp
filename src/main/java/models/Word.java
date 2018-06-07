@@ -9,7 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import USU.CS.Utils.Util;
+
+import NLP.NatureLanguageProcessor;
+import NLP.WordVec;
+import Utils.Util;
 import datastores.ReviewDB;
 import mark.Application;
 

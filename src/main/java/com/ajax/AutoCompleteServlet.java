@@ -35,9 +35,9 @@ import java.util.logging.Logger;
 //import java.util.logging.Logger;
 import org.apache.lucene.analysis.KeywordAnalyzer;
 
-import USU.CS.NLP.NatureLanguageProcessor;
-import USU.CS.NLP.WordVec;
-import USU.CS.Utils.Util;
+import NLP.NatureLanguageProcessor;
+import NLP.WordVec;
+import Utils.Util;
 import analyzers.ClustersAnalyzer;
 import analyzers.RankingKeywordAnalyzer;
 import analyzers.ReviewSearcher;

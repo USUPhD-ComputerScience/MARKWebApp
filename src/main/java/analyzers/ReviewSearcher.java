@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import USU.CS.NLP.WordVec;
+
+import NLP.WordVec;
 import datastores.ApplicationManager;
 import datastores.Vocabulary;
 import mark.Application;

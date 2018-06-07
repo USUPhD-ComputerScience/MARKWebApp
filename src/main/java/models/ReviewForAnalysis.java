@@ -11,8 +11,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-import USU.CS.NLP.NatureLanguageProcessor;
-import USU.CS.Utils.Util;
+
+import NLP.NatureLanguageProcessor;
+import NLP.WordVec;
+import Utils.Util;
 import datastores.Vocabulary;
 import mark.Application;
 

@@ -18,15 +18,10 @@ import clustering.ClusteringAlgorithm;
 import clustering.DefaultClusteringAlgorithm;
 import visualization.DendrogramPanel;
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.PageSize;
-import com.itextpdf.text.pdf.PdfContentByte;
-import com.itextpdf.text.pdf.PdfTemplate;
-import com.itextpdf.text.pdf.PdfWriter;
 
-import USU.CS.NLP.NatureLanguageProcessor;
-import USU.CS.NLP.WordVec;
-import USU.CS.Utils.Util;
+import NLP.NatureLanguageProcessor;
+import NLP.WordVec;
+import Utils.Util;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -158,51 +153,7 @@ public class ClustersAnalyzer {
         frame.setVisible(true);
     }
 
-    private static void printToPDF(DendrogramPanel dp, File outFile) {
-        try {
-            Document d = new Document(PageSize.A0);
-            PdfWriter writer = PdfWriter.getInstance(d,
-                    new FileOutputStream(outFile));
-            d.open();
 
-            PdfContentByte cb = writer.getDirectContent();
-            PdfTemplate template = cb.createTemplate(PageSize.A0.getWidth() / 4,
-                    PageSize.A0.getHeight());
-            cb.addTemplate(template, 0, 0);
-
-            Graphics2D g2d = template.createGraphics(PageSize.A0.getWidth() / 4,
-                    PageSize.A0.getHeight());
-
-            g2d.scale(0.5, 0.5);
-
-            g2d.translate(dp.getBounds().x, dp.getBounds().y);
-            if (dp instanceof JPanel) {
-                dp.setBounds(0, 0, (int) PageSize.A0.getWidth() / 2,
-                        (int) PageSize.A0.getHeight() * 2);
-            }
-            dp.paintAll(g2d);
-            dp.addNotify();
-
-            // for (int i = 0; i < dp.getComponents().length; i++) {
-            // Component c = dp.getComponent(i);
-            // if (c instanceof JLabel || c instanceof JScrollPane) {
-            // g2d.translate(c.getBounds().x, c.getBounds().y);
-            // if (c instanceof JScrollPane) {
-            // c.setBounds(0, 0, (int) PageSize.A4.getWidth() * 2,
-            // (int) PageSize.A4.getHeight() * 2);
-            // }
-            // c.paintAll(g2d);
-            // c.addNotify();
-            // System.err.println("done!");
-            // }
-            // }
-            g2d.dispose();
-
-            d.close();
-        } catch (Exception e) {
-            System.out.println(e.getStackTrace());
-        }
-    }
 
     private static void writeJson(PrintWriter pw, Cluster cluster) {
         List<Cluster> children = cluster.getChildren();

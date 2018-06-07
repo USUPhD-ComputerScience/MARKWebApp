@@ -17,8 +17,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
-import USU.CS.NLP.*;
-import USU.CS.Utils.*;
+
+import Utils.Util;
 import datastores.ApplicationManager;
 import datastores.ReviewDB;
 import datastores.Vocabulary;

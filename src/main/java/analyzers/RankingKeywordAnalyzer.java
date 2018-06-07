@@ -15,9 +15,9 @@ import models.Word;
 
 import java.util.Set;
 
-import USU.CS.NLP.NatureLanguageProcessor;
-import USU.CS.Utils.Util;
 
+import NLP.NatureLanguageProcessor;
+import Utils.Util;
 
 public class RankingKeywordAnalyzer {
 

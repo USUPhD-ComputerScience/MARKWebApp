@@ -12,8 +12,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-import USU.CS.NLP.NatureLanguageProcessor;
-import USU.CS.NLP.WordVec;
+import NLP.NatureLanguageProcessor;
+import NLP.WordVec;
+import Utils.Util;
 import datastores.Vocabulary;
 import models.Word;
 
